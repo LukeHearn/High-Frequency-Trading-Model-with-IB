@@ -104,7 +104,7 @@ class HftModel1(BaseModel):
 		position_a, position_b = self.positions.get(symbol_a), self.positions.get(symbol_b)
 
 		print('[{time}][account]{symbol_a} pos={pos_a} avgPrice={avg_price_a}|'
-			  '{symbol_b} pos={pos_b}|rpnl={rpnl:.2f} upnl={upnl:.2f}|beta:{beta:.2f} volatility:{vr:.2f}'.format(
+			  '{symbol_b} pos={pos_b} avgPrice={avg_price_b}|rpnl={rpnl:.2f} upnl={upnl:.2f}|beta:{beta:.2f} volatility:{vr:.2f}'.format(
 			time=str(pd.to_datetime('now')),
 			symbol_a=symbol_a,
 			pos_a=position_a.position if position_a else 0,
